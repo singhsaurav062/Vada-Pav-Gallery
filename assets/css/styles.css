@@ -1,0 +1,142 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --first-color: hsl(30, 16%, 50%);
+  --text-color: #fff;
+  --text-color-black: hsl(30, 8%, 15%);
+  --body-color: rgb(215, 215, 215);
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --h3-font-size: 1rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+    --h3-font-size: 1.125rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== GALLERY ===============*/
+.gallery {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  font-size: 18vw;
+  line-height: 18vw;
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 900;
+  background: url(./backg.jpg);
+  background-size: 40%;
+  background-position: 50% 50%;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0.08);
+  animation: zoomout 5s ease 500ms forwards infinite;
+}
+
+@keyframes zoomout {
+  0% {
+    background-size: 40%; /* Initial size */
+  }
+  90% {
+    background-size: 80%; /* Zoom out by 75% */
+  }
+  100%{
+    background-size: 40%;
+  }
+}
+
+button {
+  padding: 10px;
+  background-color: rgb(240, 205, 6);
+  color: var(--text-color-black);
+  border-radius: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  cursor: pointer;
+  margin-top: 20px; /* Adjusted margin */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: rgb(5, 237, 237);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 768px) {
+  .image {
+    font-size: 15vw;
+    line-height: 15vw;
+  }
+
+  button {
+    padding: 6px;
+    margin-left: 20px; /* Adjusted margin */
+    margin-right: 20px; /* Adjusted margin */
+    margin-top: 10px;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 769px) and (max-width: 1025px) {
+  .image {
+    font-size: 16vw;
+    line-height: 16vw;
+  }
+
+  button {
+    margin-top: 40px;
+    margin-left: auto; /* Center button horizontally */
+    margin-right: auto; /* Center button horizontally */
+  }
+}
+
+/* For larger devices */
+@media screen and (min-width: 1026px) {
+  .image {
+    font-size: 18vw;
+    line-height: 18vw;
+  }
+
+  button {
+    margin-top: 55px;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
+

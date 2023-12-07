@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Vada Pav Gallery</title>
+</head>
+<body>
+    <div class="gallery">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                    <h1 class="image">Vada Pav</h1>
+                </div>
+        </div>
+        
+        <button onclick="goToNextPage()">View Memories</button>
+        <div class="btnn">
+            <button onclick="goToProt()">See The Protagonists</button>
+        </div>
+    </div>
+
+    
+
+    
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        function goToNextPage() {
+            window.location.href = "list.html";
+        }
+        function goToProt() {
+            window.location.href = "Prot.html";
+        }
+    </script>
+</body>
+</html>
